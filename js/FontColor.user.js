@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add font color
 // @namespace    PoleStar
-// @version      0.7
+// @version      0.7.1
 // @description  为自己所看小说页面字体添加字体颜色
 // @author       PoleStar
 // @match      *://www.xbiquzw.com/*
@@ -12,6 +12,8 @@
 // @match      *://www.xlewen4.com/*
 // @match      *://www.biququ.la/*
 // @match      *://www.bqgbi.cc/*
+// @match      *://www.tzkczc.com/*
+// @match      *://www.mjzww.com/*
 // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 // @grant        none
 // ==/UserScript==
@@ -38,7 +40,7 @@
          document.body.style.backgroundColor="rgb(204, 232, 207)";
      }
      //判定小说网站数组
-    var mycars=new Array("biqu","199zw","shuhuang","aishangba4","xlewen4","biququ");
+    var mycars=new Array("biqu","199zw","shuhuang","aishangba4","tzkczc","mjzww");
 
     for(var i=0;i<mycars.length;i++){
         if(url.indexOf(mycars[i])!=-1){
@@ -73,14 +75,28 @@
         }
     }*/
 
-    if(url.indexOf('199zw')!=-1){//199中文网  补充键盘按键，网站本身无
+    if(url.indexOf('mjzww')!=-1){//199中文网<'199zw'>  补充键盘按键，网站本身无
         $(document).keydown(function(event){
             if(event.keyCode == 37){//space down event ←
                 //标签无id无class故根据标签a在整个页面A标签数组的第几个来进行点击操作
-                document.getElementsByTagName("a")[33].click();
+                document.getElementsByTagName("a")[46].click();
             }
             if(event.keyCode == 39){//space down event →
-                document.getElementsByTagName("a")[35].click();
+                document.getElementsByTagName("a")[48].click();
+                //alert(document.getElementsByTagName("a")[48].href);
+            }
+        });
+    }
+
+    if(url.indexOf('tzkczc')!=-1){//天籁小说网  补充键盘按键，网站本身无
+        $(document).keydown(function(event){
+            if(event.keyCode == 37){//space down event ←
+                //标签无id无class故根据标签a在整个页面A标签数组的第几个来进行点击操作
+                document.getElementsByTagName("a")[47].click();
+            }
+            if(event.keyCode == 39){//space down event →
+                document.getElementsByTagName("a")[49].click();
+                //alert(document.getElementsByTagName("a")[49].href);
             }
         });
     }
