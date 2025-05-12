@@ -2,7 +2,7 @@
 // @name         漫画快速上下话切换
 // @namespace    Kuaikan
 // @icon         https://festatic.v3mh.com/static-resource/img/32x32/favicon.ico
-// @version      0.4
+// @version      0.1
 // @description  为快看小说添加上下话键盘操作。</p>键盘方向键← 为上一话 || 方向键→ 为下一话
 // @author       PoleStar
 // @match        https://www.kuaikanmanhua.com/*
