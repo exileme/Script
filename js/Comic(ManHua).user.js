@@ -44,6 +44,7 @@
             gdzhongju();
         }else if (url.indexOf('colamanga')!=-1){
             //集云漫画
+            colamanga();
         }
     });
 
@@ -134,6 +135,28 @@
                 }
             }
              window.location.href=href;
+        }
+    }
+    
+    function colamanga(){
+         if(event.keyCode == 37){//space down event ←
+            for(var i =0;i<TagName.length;i++){
+                if("上一章"==TagName[i].innerText){
+                    href = TagName[i].attributes.href.value;
+                    break;
+                }
+            }
+            window.location.href=href;
+        }
+        if(event.keyCode == 39){//space down event →
+            for(var ii =0;ii<TagName.length;ii++){
+                if("下一章"==TagName[ii].innerText){
+                    href = TagName[ii].attributes.href.value;
+                    break;
+                }
+            }
+
+            window.location.href=href;
         }
     }
 })();
