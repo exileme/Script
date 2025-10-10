@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         获取页面URL悬浮按钮
+// @name         获取页面URL悬浮按钮 
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  在页面右下角添加悬浮按钮，点击获取当前页面URL
